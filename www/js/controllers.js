@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
           $scope.data = JSON.stringify(attribution);
 
           if (window.FirebasePlugin) {
-            window.FirebasePlugin.logEvent("searchads", $scope.data);
+            window.FirebasePlugin.logEvent("select_content", { content_type: "page_view", item_id: "home" });
           }
         }, function(err) {
           console.dir(err);
